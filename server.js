@@ -16,7 +16,7 @@ const options = {
 
 // Настройка CORS
 // Список разрешенных источников
-const allowedOrigins = ['https://10.0.1.12', 'https://aac7-95-158-48-36.ngrok-free.app'];
+const allowedOrigins = ['https://10.0.1.12', ' https://439f-95-158-48-36.ngrok-free.app'];
 
 app.use(cors({
     origin: function (origin, callback) {
