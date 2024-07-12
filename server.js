@@ -16,7 +16,7 @@ const options = {
 
 // Настройка CORS
 // Список разрешенных источников
-const allowedOrigins = ['https://10.0.1.12', ' https://439f-95-158-48-36.ngrok-free.app'];
+const allowedOrigins = ['https://ksergv.github.io', 'https://439f-95-158-48-36.ngrok-free.app'];
 
 app.use(cors({
     origin: function (origin, callback) {
@@ -34,14 +34,6 @@ app.use(cors({
 
 // Использование body-parser для обработки JSON
 app.use(bodyParser.json());
-
-// Настройка Express
-app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://10.0.1.12');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
-    res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-    next();
-});
 
 app.get('/api/posts/restore', (req, res) => {
     console.log('Restore data request received');
