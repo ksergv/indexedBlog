@@ -212,7 +212,11 @@ button:hover {
   font-size: 150%; /* Размер шрифта первого символа */
   color: black; /* черный цвет текста */
  }
-
+.image{
+  width:100px;
+  height:auto;
+  margin-left:20px;
+}
 .post-img {
   width: 30%;
   height: auto;
