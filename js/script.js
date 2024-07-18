@@ -193,12 +193,14 @@ document.addEventListener('DOMContentLoaded', () => {
                         });
 
                         console.log('Data restored successfully');
+                        statusElement.textContent = 'Data redtored successfully';
                         resolve();
                     };
 
                     request.onerror = (event) => {
                         console.error('Error restoring data:', event.target.error);
                         reject(event.target.error);
+                        statusElement.textContent = 'Error to restore Data from json';
                     };
                 })
                 .catch(error => {
