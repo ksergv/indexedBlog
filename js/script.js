@@ -65,9 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    importButton.addEventListener('click', () => {
-        importPostsFromServer();
-    });
+  //  importButton.addEventListener('click', () => {
+  //      importPostsFromServer();
+  //  });
 
     deleteButton.addEventListener('click', () => {
         deleteDatabase().then(() => {
