@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const exportButton = document.getElementById('export-button');
-    const importButton = document.getElementById('import-button');
-    const deleteButton = document.getElementById('delete-button');
+    //const importButton = document.getElementById('import-button');
+    //const deleteButton = document.getElementById('delete-button');
     const restoreButton = document.getElementById('restore-button');
     const statusElement = document.getElementById('status');
 
@@ -65,9 +65,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-  //  importButton.addEventListener('click', () => {
-  //      importPostsFromServer();
-  //  });
+  /*  importButton.addEventListener('click', () => {
+        importPostsFromServer();
+    });
 
     deleteButton.addEventListener('click', () => {
         deleteDatabase().then(() => {
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
             statusElement.textContent = 'Error deleting database';
         });
     });
-
+*/
     restoreButton.addEventListener('click', () => {
         restorePostsFromFile().then(() => {
             statusElement.textContent = 'Data restored successfully';
