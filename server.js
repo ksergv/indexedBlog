@@ -16,7 +16,7 @@ const options = {
 
 // Настройка CORS
 // Список разрешенных источников
-const allowedOrigins = ['https://ksergv.github.io', 'https://4221-31-14-75-35.ngrok-free.app'];
+const allowedOrigins = ['https://ksergv.github.io', 'https://0d51-95-158-48-15.ngrok-free.app'];
 
 app.use(cors({
     origin: function (origin, callback) {
