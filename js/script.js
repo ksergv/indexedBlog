@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function sendPostsToServer(posts) {
-        fetch('https://0d51-95-158-48-15.ngrok-free.app/api/posts/import', {
+        fetch('https://ff90-31-14-75-18.ngrok-free.app/api/posts/import', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -131,7 +131,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function importPostsFromServer() {
-        fetch('https://0d51-95-158-48-15.ngrok-free.app/api/posts')
+        fetch('https://ff90-31-14-75-18.ngrok-free.app/api/posts')
             .then(response => response.json())
             .then(posts => {
                 const request = indexedDB.open('postsDB', 1);
@@ -179,7 +179,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
    async function restorePostsFromFile() {
         return new Promise((resolve, reject) => {
-            fetch('https://0d51-95-158-48-15.ngrok-free.app/api/posts/restore') //для мобилки
+            fetch('https://ff90-31-14-75-18.ngrok-free.app/api/posts/restore') //для мобилки
                 .then(response => response.json())
                 .then(posts => {
                     const request = indexedDB.open('postsDB', 1);
