@@ -84,18 +84,16 @@ z-index: 200;"><a href="../index.html" class="login">Back</a></div>
             <p>Encrypted Password: <span id="encryptedOutput"></span></p>
         </div>---> 
     </div>
-    <script>
+   
+	<script>
+        // Заранее зашифрованный пароль (замените его на фактическое значение)
+        var storedEncryptedPassword = "l276:tw";
+        
         function onLoginSuccess() {
             // Установить аутентификацию
             sessionStorage.setItem('authenticated', 'true');    
             alert('Вы успешно авторизовались и тепeрь можете реадктировать и удалять посты!');
             }
-        
-    </script>
-	<script>
-        // Заранее зашифрованный пароль (замените его на фактическое значение)
-        var storedEncryptedPassword = "l276:tw";
-
          
         // Проверка логина и зашифрованного пароля
         function checkLogin() {
