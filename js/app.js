@@ -148,7 +148,7 @@ function isAuthenticated() {
     if (!isAuthenticated()) {
         // Перенаправление на страницу входа
      // Перенаправление на страницу входа с параметром возврата
-     window.location.href = 'login.html?redirect=editPost&id=' + encodeURIComponent(id);
+     window.location.href = './login/login.html?redirect=editPost&id=' + encodeURIComponent(id);
      return;
     }
         const transaction = db.transaction(['posts'], 'readonly');
