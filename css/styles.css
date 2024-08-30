@@ -91,7 +91,7 @@ header.shadow .logo {
 .loginBtn {
   position: fixed;
   top: 50px;
-  right: 120px;
+  right: 160px;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -100,6 +100,21 @@ header.shadow .logo {
   cursor: pointer;
 }
 .loginBtn:hover {
+  background: hsl(24, 98%, 58%);
+  transition: 0.3s;
+}
+.outBtn {
+  position: fixed;
+  top: 50px;
+  right: 40px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.outBtn:hover {
   background: hsl(24, 98%, 58%);
   transition: 0.3s;
 }
