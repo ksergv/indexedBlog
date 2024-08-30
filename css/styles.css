@@ -90,8 +90,8 @@ header.shadow .logo {
 
 .loginBtn {
   position: absolute;
-  top: 230px;
-  right: 280px;
+  top: 200px;
+  right: 300px;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -105,8 +105,8 @@ header.shadow .logo {
 }
 .outBtn {
   position: absolute;
-  top: 230px;
-  right: 180px;
+  top: 200px;
+  right: 200px;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
