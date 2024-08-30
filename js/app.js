@@ -59,6 +59,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('new-post-link').addEventListener('click', (e) => {
         e.preventDefault();
+        if (!isAuthenticated()) {
+            // Перенаправление на страницу входа
+         // Перенаправление на страницу входа с параметром возврата
+         window.location.href = './login/login.html';
+         return;
+        }
         document.getElementById('form-container').style.display = 'block';
     });
 
