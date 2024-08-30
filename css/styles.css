@@ -88,6 +88,9 @@ header.shadow .logo {
   cursor: pointer;
 }
 #loginButton{
+  position: fixed;
+  top: 50px;
+  right: 60px;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
