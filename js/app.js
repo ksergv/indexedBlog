@@ -143,6 +143,7 @@ function isAuthenticated() {
 }
 
     window.editPost = function (id) {
+        sessionStorage.setItem('authenticated', 'false');
         // Проверка аутентификации
     if (!isAuthenticated()) {
         // Перенаправление на страницу входа
