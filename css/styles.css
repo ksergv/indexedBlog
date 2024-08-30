@@ -87,21 +87,7 @@ header.shadow .logo {
   border-radius: 5px;
   cursor: pointer;
 }
-#loginButton{
-  position: fixed;
-  top: 50px;
-  right: 60px;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.loginButton:hover {
-  background: hsl(24, 98%, 58%);
-  transition: 0.3s;
-}
+
 .login {
   padding: 8px 14px;
   text-transform: uppercase;
