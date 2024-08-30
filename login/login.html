@@ -88,7 +88,7 @@ z-index: 200;"><a href="../index.html" class="login">Back</a></div>
         function onLoginSuccess() {
             // Установить аутентификацию
             sessionStorage.setItem('authenticated', 'true');    
-              <p>Вы успешно авторизовались и тепрь можете реадктировать и удалять посты!<p>
+            alert('Вы успешно авторизовались и тепeрь можете реадктировать и удалять посты!');
             }
         
     </script>
@@ -111,6 +111,8 @@ z-index: 200;"><a href="../index.html" class="login">Back</a></div>
                 onLoginSuccess();
             } else {
                 alert('Неверный логин или пароль');
+                 // Установить запрет аутентификацию
+            sessionStorage.setItem('authenticated', 'false');  
             }
         }
 
