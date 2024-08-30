@@ -143,12 +143,11 @@ function isAuthenticated() {
 }
 
     window.editPost = function (id) {
-        console.log('authentificate='+isAuthenticated())
         // Проверка аутентификации
     if (!isAuthenticated()) {
         // Перенаправление на страницу входа
      // Перенаправление на страницу входа с параметром возврата
-     window.location.href = './login/login.html?redirect=editPost&id=' + encodeURIComponent(id);
+     window.location.href = './login/login.html';
      return;
     }
 
@@ -175,6 +174,13 @@ function isAuthenticated() {
     };
 
     window.deletePost = function (id) {
+               // Проверка аутентификации
+    if (!isAuthenticated()) {
+        // Перенаправление на страницу входа
+     // Перенаправление на страницу входа с параметром возврата
+     window.location.href = './login/login.html';
+     return;
+    }
         const transaction = db.transaction(['posts'], 'readwrite');
         const store = transaction.objectStore('posts');
         const request = store.delete(id);

@@ -87,19 +87,10 @@ z-index: 200;"><a href="../index.html" class="login">Back</a></div>
     <script>
         function onLoginSuccess() {
             // Установить аутентификацию
-            sessionStorage.setItem('authenticated', 'true');
-    
-            // Получить параметр id из URL
-            const params = new URLSearchParams(window.location.search);
-            const id = params.get('id');
-    
-            // Перенаправить обратно на index.html с параметром id
-            if (id) {
-                window.location.href = '../index.html?id=' + encodeURIComponent(id);
-            } else {
+            sessionStorage.setItem('authenticated', 'true');    
                 window.location.href = '../index.html';
             }
-        }
+        
     </script>
 	<script>
         // Заранее зашифрованный пароль (замените его на фактическое значение)
