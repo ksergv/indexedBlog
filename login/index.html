@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Sliding Login & Signup Forms - HTML, CSS & Javascript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+	    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('./images/background.jpg') no-repeat;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+  
+		.imgBox{
+	  z-index: 888;
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  flex-direction: column;
+	  width: 350px;
+	  height: auto;
+	  padding: 0 35px;
+	}
+	.form-box{
+	  z-index: 999;
+	  background: #fff;
+	  box-shadow: 0 5px 25px rgb(0 0 0 / 15%);
+	  width: 350px;
+	  padding: 15px 35px;
+	  border-radius: 5px;
+	  height:auto;
+	}
+
+        </style>
+  </head>
+  <body>
+
+
+   <div class="imgBox sign-in-imgBox "> 
+	    
+	    <div class="form-box sign-in-box">
+	    <img src="images/signin-img.png" alt="">
+	     
+		   
+        <h2>Login</h2>
+        <form action="">
+          <div class="field">
+            <i class="uil uil-at"></i>
+            <input type="email" id="username" placeholder="Email ID" required>
+          </div>
+          <div class="field">
+            <i class="uil uil-lock-alt"></i>
+            <input class="password-input" id="password" type="password" placeholder="Password" required>
+            <div class="eye-btn"><i class="uil uil-eye-slash"></i></div>
+          </div>
+          
+          <input class="submit-btn" onclick="checkLogin()" type="button" value="Войти">
+	          <a href="../index.php" class="submit-btn">Вернуться</a></div>
+        </form>
+        </div>
+        </div>
+
+
+
+  <!-- <hr/>
+       <p> вводите Encrypted Password в login/index.html</p>
+		<div>
+            <h3>Encrypt Password</h3>
+            <input type="text" id="encryptInput" placeholder="Enter Password">
+            <button type="button" onclick="encryptAndDisplay()">Encrypt</button>
+            <p>Encrypted Password: <span id="encryptedOutput"></span></p>
+      </div>
+     -->
+
+  
+<script>
+        // Заранее зашифрованный пароль (замените его на фактическое значение)
+        var storedEncryptedPassword = "l276:tw";
+
+        // Проверка логина и зашифрованного пароля
+        function checkLogin() {
+            var username = document.getElementById('username').value;
+            var inputPassword = document.getElementById('password').value;
+		
+
+            // Заранее зашифрованный пароль
+            var encryptedInputPassword = encryptPassword(inputPassword);
+
+              // Проверка зашифрованного пароля
+            if (encryptedInputPassword === storedEncryptedPassword) {
+                window.location.href = '../data_Change/index.html';
+            } else {
+                alert('Неверный логин или пароль');
+            }
+        }
+
+        // Функция для шифрования пароля
+        function encryptPassword(password) {
+            // Ваш код для шифрования пароля
+            // В этом примере используется простая замена символов
+            return password.replace(/./g, function(char) {
+                return String.fromCharCode(char.charCodeAt(0) + 1);
+            });
+        }
+
+        // Функция для шифрования и отображения зашифрованного пароля
+        function encryptAndDisplay() {
+            var encryptInput = document.getElementById('encryptInput').value;
+            var encryptedPassword = encryptPassword(encryptInput);
+            document.getElementById('encryptedOutput').innerText = encryptedPassword;
+        }
+   
+      //input fields focus effects
+      const textInputs = document.querySelectorAll("input");
+
+      textInputs.forEach(textInput => {
+        textInput.addEventListener("focus", () => {
+          let parent = textInput.parentNode;
+          parent.classList.add("active");
+        });
+
+        textInput.addEventListener("blur", () => {
+          let parent = textInput.parentNode;
+          parent.classList.remove("active");
+        });
+      });
+
+      //password show/hide button
+      const passwordInput = document.querySelector(".password-input");
+      const eyeBtn = document.querySelector(".eye-btn");
+
+      eyeBtn.addEventListener("click", () => {
+        if(passwordInput.type === "password"){
+          passwordInput.type = "text";
+          eyeBtn.innerHTML = "<i class='uil uil-eye'></i>";
+        }
+        else{
+          passwordInput.type = "password";
+          eyeBtn.innerHTML = "<i class='uil uil-eye-slash'></i>";
+        }
+      });
+
+      
+    </script>
+
+  </body>
+</html>

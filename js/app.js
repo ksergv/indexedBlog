@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const profileName = document.getElementById('profile-name').value;
         const content = document.getElementById('content').value;
         const image = document.getElementById('image').value;
+       
 
         const post = {
             category,
@@ -134,7 +135,20 @@ document.addEventListener('DOMContentLoaded', () => {
         };
     }
 
+    // Пример функции для проверки аутентификации (зависит от вашей реализации)
+function isAuthenticated() {
+    // Возвращает true, если пользователь аутентифицирован, и false в противном случае
+    // Пример: return sessionStorage.getItem('authenticated') === 'true';    
+    return sessionStorage.getItem('authenticated') === 'true';
+}
+
     window.editPost = function (id) {
+        // Проверка аутентификации
+    if (!isAuthenticated()) {
+        // Перенаправление на страницу входа
+        window.location.href = './login/login.html';
+        return;  // Прекращение выполнения функции
+    }
         const transaction = db.transaction(['posts'], 'readonly');
         const store = transaction.objectStore('posts');
         const request = store.get(id);
