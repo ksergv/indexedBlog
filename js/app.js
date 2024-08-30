@@ -151,6 +151,7 @@ function isAuthenticated() {
      window.location.href = './login/login.html?redirect=editPost&id=' + encodeURIComponent(id);
      return;
     }
+
         const transaction = db.transaction(['posts'], 'readonly');
         const store = transaction.objectStore('posts');
         const request = store.get(id);
