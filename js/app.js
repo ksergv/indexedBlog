@@ -143,7 +143,7 @@ function isAuthenticated() {
 }
 
     window.editPost = function (id) {
-
+        console.log('authentificate='+isAuthenticated())
         // Проверка аутентификации
     if (!isAuthenticated()) {
         // Перенаправление на страницу входа

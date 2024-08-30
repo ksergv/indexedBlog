@@ -84,28 +84,28 @@ z-index: 200;"><a href="../index.html" class="login">Back</a></div>
             <p>Encrypted Password: <span id="encryptedOutput"></span></p>
         </div>---> 
     </div>
+    <script>
+        function onLoginSuccess() {
+            // Установить аутентификацию
+            sessionStorage.setItem('authenticated', 'true');
+    
+            // Получить параметр id из URL
+            const params = new URLSearchParams(window.location.search);
+            const id = params.get('id');
+    
+            // Перенаправить обратно на index.html с параметром id
+            if (id) {
+                window.location.href = '../index.html?id=' + encodeURIComponent(id);
+            } else {
+                window.location.href = '../index.html';
+            }
+        }
+    </script>
 	<script>
         // Заранее зашифрованный пароль (замените его на фактическое значение)
         var storedEncryptedPassword = "l276:tw";
 
-           // Проверка успешного входа
-           function onLoginSuccess() {
-        // Установить аутентификацию
-        sessionStorage.setItem('authenticated', 'true');
-
-        // Проверка на наличие параметра redirect
-        const params = new URLSearchParams(window.location.search);
-        const redirect = params.get('redirect');
-        const id = params.get('id');
-
-        if (redirect === 'editPost' && id) {
-            // Вернуться на страницу редактирования
-            window.location.href = '../index.html?id=' + encodeURIComponent(id);
-        } else {
-            // Иначе, вернуться на главную
-            window.location.href = 'index.html';
-        }
-    }
+         
         // Проверка логина и зашифрованного пароля
         function checkLogin() {
             var username = document.getElementById('username').value;
