@@ -89,9 +89,9 @@ header.shadow .logo {
 }
 
 .loginBtn {
-  position: fixed;
-  top: 50px;
-  right: 160px;
+  position: absolute;
+  top: 120px;
+  right: 250px;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -104,9 +104,9 @@ header.shadow .logo {
   transition: 0.3s;
 }
 .outBtn {
-  position: fixed;
-  top: 50px;
-  right: 40px;
+  position: absolute;
+  top: 120px;
+  right: 150px;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
