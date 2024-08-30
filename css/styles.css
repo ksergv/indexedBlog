@@ -147,8 +147,6 @@ header.shadow .logo {
     background: #fff;
     padding: 20px;
     margin: 20px;
-    font-size: 1.8rem;
-    font-weight: 400;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -160,6 +158,10 @@ form {
 
 label {
     margin-top: 10px;
+}
+form p{
+  font-size: 1.5rem;
+  font-weight: 400;
 }
 
 input, textarea {
