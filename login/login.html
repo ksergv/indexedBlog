@@ -6,16 +6,7 @@
     <link rel="stylesheet" href="../css/style.css">
     <title>Login Form</title>
     <style>
-        :root {
-        --container-color: #1a1e21;
-        --second-color: #4d38eb;
-        --text-color: #fafafa;
-        --bg-color: #6ccfe6;
-        }
-        ::selection {
-        color: var(--bg-color);
-        background: var(--second-color);
-        }
+        
         body {
             margin: 0;
             padding: 0;
@@ -27,7 +18,7 @@
             justify-content: center;
             height: 100vh;
         }
-
+       
         .login-container {
             background: rgba(255, 255, 255, 0.8);
             padding: 20px;
@@ -66,18 +57,7 @@
         p{
             font-size: 12px;
         }
-        .login {
-            padding: 8px 14px;
-            text-transform: uppercase;
-            font-weight: 500;
-            border-radius: 4px;
-            background: var(--second-color);
-            color: var(--bg-color);
-            }
-            .login:hover {
-            background: hsl(24, 98%, 58%);
-            transition: 0.3s;
-            }
+     
     </style>
 </head>
 <body>
@@ -90,7 +70,7 @@
             <input type="text" id="username" placeholder="Username" required>
             <input type="password" id="password" placeholder="Password" required>
             <button type="button" onclick="checkLogin()">вход в панель редактирования</button>
-            <a href="../index.html" class="login">Вернуться</a>
+            <button type="button" href="../index.html">Вернуться</button>
         </form>
     </br>
      <!---<hr/>
