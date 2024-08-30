@@ -70,8 +70,6 @@
             <input type="text" id="username" placeholder="Username" required>
             <input type="password" id="password" placeholder="Password" required>
             <button type="button" onclick="checkLogin()">вход в панель редактирования</button>
-            <hr/>
-            <button type="button" onclick="back()">Вернуться</button>
         </form>
     </br>
      <!---<hr/>
@@ -92,6 +90,7 @@
             // Установить аутентификацию
             sessionStorage.setItem('authenticated', 'true');    
             alert('Вы успешно авторизовались и тепeрь можете реадктировать и удалять посты!');
+            window.location.href="../index.html";
             }
          
         // Проверка логина и зашифрованного пароля
@@ -112,9 +111,7 @@
             sessionStorage.setItem('authenticated', 'false');  
             }
         }
-        function back() {
-        window.location.href="../index.html";
-        }
+       
         // Функция для шифрования пароля
         function encryptPassword(password) {
             // Ваш код для шифрования пароля
