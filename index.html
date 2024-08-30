@@ -104,6 +104,18 @@
       integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
       crossorigin="anonymous"></script>
         <!-- Link To JS -->
+        <script>
+            window.onload = function() {
+                // Проверяем, есть ли в URL параметр id
+                const params = new URLSearchParams(window.location.search);
+                const id = params.get('id');
+        
+                if (id) {
+                    // Вызов editPost, если параметр id существует
+                    window.editPost(id);
+                }
+            };
+        </script>
     <script src="js/app.js"></script>
     <script src="js/main.js"></script>
     
