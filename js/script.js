@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const deleteButton = document.getElementById('delete-button');
     const restoreButton = document.getElementById('restore-button');
     const statusElement = document.getElementById('status');
+    const outButton = document.getElementById('outBtn');
 
     if ('serviceWorker' in navigator) {
         console.log('Service Worker is supported by the browser');
@@ -50,6 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Optional: Handle app installed event
     window.addEventListener('appinstalled', (event) => {
         console.log('App was installed.', event);
+    });
+
+    outButton.addEventListener('click', () => {
+        // Установить запрет аутентификацию
+   sessionStorage.setItem('authenticated', 'false');  
+   alert('Вы вышли из режима редактирования');
     });
     
     
