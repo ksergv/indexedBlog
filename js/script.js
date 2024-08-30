@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const importButton = document.getElementById('import-button');
     const deleteButton = document.getElementById('delete-button');
     const restoreButton = document.getElementById('restore-button');
-    const loginButton = document.getElementById('login-button');
     const statusElement = document.getElementById('status');
 
     if ('serviceWorker' in navigator) {
@@ -69,9 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     importButton.addEventListener('click', () => {
         importPostsFromServer();
     });
-    loginButton.addEventListener('click', () => {
-        window.location.href = './login/login.html';
-    });
+
 
     deleteButton.addEventListener('click', () => {
         deleteDatabase().then(() => {
