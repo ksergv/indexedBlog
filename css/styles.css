@@ -91,7 +91,7 @@ header.shadow .logo {
 .loginBtn {
   position: absolute;
   top: 200px;
-  right: 300px;
+  right: 30%;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -106,7 +106,7 @@ header.shadow .logo {
 .outBtn {
   position: absolute;
   top: 200px;
-  right: 200px;
+  right: 12%;
   padding: 10px 20px;
   background-color: #007bff;
   color: white;
@@ -403,6 +403,12 @@ iframe{
     margin: 0 auto;
     width: 95%;
   }
+  loginBtn {
+    right: 30%; 
+  }
+  outBtn {
+    right: 12%; 
+  }
   .home-text {
     width: 100%;
   }
@@ -414,6 +420,12 @@ iframe{
   .post-container {
     margin: 0 auto;
     width: 95%;
+  }
+  loginBtn {
+    right: 30%; 
+  }
+  outBtn {
+    right: 12%; 
   }
 }
 @media (max-width: 768px) {
@@ -442,8 +454,16 @@ iframe{
     height: 435px;
   }
   .post-content {
-    margin-top: 9rem !important;
+    margin
+    -top: 9rem !important;
   }
+  loginBtn {
+    right: 30%; 
+  }
+  outBtn {
+    right: 12%; 
+  }
+  
 }
 @media (max-width: 570px) {
   .post-header {
@@ -460,6 +480,12 @@ iframe{
     row-gap: 1rem;
     padding: 20px 0;
     text-align: center;
+  }
+  loginBtn {
+    right: 30%; 
+  }
+  outBtn {
+    right: 12%; 
   }
 }
 @media (max-width: 396px) {
@@ -491,5 +517,11 @@ iframe{
     font-size: 0.875rem;
     line-height: 1.5rem;
     margin: 10px 0;
+  }
+  loginBtn {
+    right: 30%; 
+  }
+  outBtn {
+    right: 12%; 
   }
 }
